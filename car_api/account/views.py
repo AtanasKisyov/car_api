@@ -9,12 +9,3 @@ UserModel = get_user_model()
 
 class RegisterView(rest_views.CreateAPIView):
     serializer_class = RegisterUserSerializer
-
-
-class LoginView(rest_views.GenericAPIView):
-    authentication_classes = (UserAuthentication, )
-    serializer_class = LoginUserSerializer
-    http_method_names = ['get', 'post']
-
-    def post(self, request):
-        pass
